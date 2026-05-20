@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Uni-Edit</title>
+    <meta
+      name="description"
+      content="Uni-Edit: Intelligent Editing Is A General Task For Unified Model Tuning."
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Uni-Edit: Intelligent Editing Is A General Task For Unified Model Tuning" />
+    <meta property="og:description" content="A single intelligent editing task for unified multimodal model tuning." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Uni-Edit" />
+    <meta name="twitter:description" content="Intelligent Editing Is A General Task For Unified Model Tuning." />
+
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      :root {
+        --purple: #7C3AED;
+        --purple-soft: #F3EFFF;
+        --purple-accent: #5B21B6;
+        --purple-mid: #A78BFA;
+        --shadow: 0 16px 40px rgba(124, 58, 237, 0.10);
+      }
+
+      .keywords {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 16px;
+        flex-wrap: wrap;
+      }
+
+      .kw-badge {
+        background: var(--purple-soft);
+        color: var(--purple);
+        border: 1px solid #ddd6fe;
+        border-radius: 20px;
+        padding: 4px 16px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .key-stats {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        margin: 24px 0;
+      }
+
+      .key-stat {
+        flex: 1;
+        min-width: 140px;
+        background: var(--purple-soft);
+        border: 1px solid #ddd6fe;
+        border-radius: 12px;
+        padding: 18px 20px;
+        text-align: center;
+      }
+
+      .key-stat .ks-val {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--purple);
+        line-height: 1;
+      }
+
+      .key-stat .ks-label {
+        font-size: 12px;
+        color: var(--muted);
+        margin-top: 6px;
+        font-weight: 600;
+      }
+
+      .asset-frame img {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: var(--soft);
+        box-shadow: var(--shadow);
+      }
+
+      .citation-block {
+        background: var(--soft);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 20px 24px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 12px;
+        color: var(--muted);
+        overflow-x: auto;
+        white-space: pre-wrap;
+        word-break: break-all;
+        line-height: 1.8;
+      }
+
+      @media (max-width: 680px) {
+        .key-stats {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#top">
+        <img class="brand-icon" src="assets/pure_log.jpg" alt="" />
+        Uni-Edit
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#abstract">Abstract</a>
+        <a href="#data-construction">Data Construction</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#bibtex">BibTeX</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero paper-width">
+        <div class="keywords">
+          <span class="kw-badge">Intelligent Editing</span>
+          <span class="kw-badge">General task for Unified Model</span>
+        </div>
+        <h1><span class="title-rest">Uni-Edit: Intelligent Editing Is A General Task For Unified Model Tuning</span></h1>
+        <p class="subtitle">
+          We introduce Uni-Edit, an intelligent image editing task that improves image understanding, generation, and editing within a unified multimodal model using one task, one training stage, and one dataset.
+        </p>
+
+        <div class="authors" aria-label="Authors">
+          <span>Dian Zheng<sup>1</sup></span>
+          <span>Manyuan Zhang<sup>1&#8224;</sup></span>
+          <span>Hongyu Li</span>
+          <span>Hongbo Liu<sup>2</sup></span>
+          <span>Kai Zou<sup>3</sup></span>
+          <span>Kaituo Feng<sup>1</sup></span>
+          <span>Hongsheng Li<sup>1&#9993;</sup></span>
+        </div>
+
+        <div class="affiliations">
+          <p><sup>1</sup>CUHK MMLab &middot; <sup>2</sup>TJU &middot; <sup>3</sup>USTC</p>
+          <p>&#8224;Project Leader &middot; &#9993;Corresponding Author</p>
+        </div>
+
+        <div class="actions">
+          <a class="button primary" href="#">Paper</a>
+          <a class="button" href="https://github.com/zhengdian1/Uni-Edit">Code</a>
+          <a class="button" href="https://huggingface.co/datasets/Uni-Edit/Train-Data">Data</a>
+          <a class="button" href="https://huggingface.co/Uni-Edit/Uni-Edit-BAGEL">Model</a>
+        </div>
+      </section>
+
+      <figure class="teaser paper-width asset-frame">
+        <img src="assets/teaser.webp" alt="Uni-Edit teaser figure" />
+      </figure>
+
+      <section class="paper-width">
+        <div class="key-stats">
+          <div class="key-stat">
+            <div class="ks-val">53.6</div>
+            <div class="ks-label">MMMU (base: 52.8)</div>
+          </div>
+          <div class="key-stat">
+            <div class="ks-val">71.3</div>
+            <div class="ks-label">MMVP (base: 69.3)</div>
+          </div>
+          <div class="key-stat">
+            <div class="ks-val">0.75</div>
+            <div class="ks-label">WISE (base: 0.72)</div>
+          </div>
+          <div class="key-stat">
+            <div class="ks-val">17.2</div>
+            <div class="ks-label">RISE (base: 11.9)</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section paper-width" id="abstract">
+        <h2>Abstract</h2>
+        <p>
+          We introduce <strong>Uni-Edit</strong>, an intelligent image editing task that serves as a general task for Unified Multimodal Model (UMM) tuning. Unlike conventional mixed multi-task training that suffers from task conflicts and often requires complex multi-stage pipelines, <strong>Uni-Edit improves image understanding, generation, and editing capabilities simultaneously using only one task, one training stage, and one dataset</strong>.
+        </p>
+        <p>
+          To overcome the limitations of simplistic existing editing data, we propose an <strong>automated and scalable data synthesis pipeline</strong> for intelligent editing. By transforming diverse VQA data into complex instructions with embedded questions and nested logic, we build <strong>Uni-Edit-148k</strong>, a dedicated dataset pairing reasoning-intensive instructions with high-quality edited images.
+        </p>
+        <p>
+          Experiments on BAGEL and Janus-Pro demonstrate that tuning solely on Uni-Edit yields comprehensive enhancements across multimodal understanding, generation, and editing without requiring massive data mixing, balancing tricks, or auxiliary operations.
+        </p>
+      </section>
+
+      <section class="section paper-width" id="data-construction">
+        <h2>Data Construction</h2>
+        <p>
+          Uni-Edit constructs intelligent editing data by transforming VQA-style multimodal understanding examples into editing instructions that contain embedded questions, visual reasoning requirements, and nested logic. The resulting data pairs reasoning-intensive instructions with edited images, enabling unified model tuning through a single task.
+        </p>
+
+        <figure class="asset-frame paper-figure" style="width: 860px; max-width: 100%; margin-left: auto; margin-right: auto;">
+          <img src="assets/data_pipeline.png" alt="Uni-Edit data construction pipeline" />
+        </figure>
+      </section>
+
+      <section class="section paper-width" id="gallery">
+        <h2>Qualitative Results</h2>
+        <p class="note">
+          Representative examples of intelligent editing, including reasoning-intensive instructions, edited images, and unified model behavior.
+        </p>
+
+        <figure class="asset-frame" style="width: 900px; max-width: 100%; margin-left: auto; margin-right: auto;">
+          <img src="assets/per1.png" alt="Image Generation Comparison" />
+        </figure>
+
+        <div style="margin-top: 16px; display: flex; flex-direction: column; gap: 16px;">
+          <figure class="asset-frame" style="width: 900px; max-width: 100%; margin-left: auto; margin-right: auto;">
+            <img src="assets/per2.png" alt="Image Editing Comparison" />
+          </figure>
+
+        </div>
+      </section>
+
+      <section class="section paper-width" id="bibtex">
+        <h2>BibTeX</h2>
+        <div class="citation-block">@article{zheng2026uniedit,
+  title   = {Uni-Edit: Intelligent Editing Is A General Task For Unified Model Tuning},
+  author  = {Zheng, Dian and Zhang, Manyuan and Li, Hongyu and Liu, Hongbo and Zou, Kai and Feng, Kaituo and Li, Hongsheng},
+  journal = {},
+  year    = {2026}
+}</div>
+        <div style="margin-top: 16px;">
+          <button class="button" onclick="copyCitation(this)" style="cursor:pointer;">Copy Citation</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer paper-width">
+      <p>Uni-Edit: Intelligent Editing Is A General Task For Unified Model Tuning. &copy; 2026.</p>
+    </footer>
+
+    <script>
+      function copyCitation(btn) {
+        const text = `@article{zheng2026uniedit,
+  title   = {Uni-Edit: Intelligent Editing Is A General Task For Unified Model Tuning},
+  author  = {Zheng, Dian and Zhang, Manyuan and Li, Hongyu and Liu, Hongbo and Zou, Kai and Feng, Kaituo and Li, Hongsheng},
+  journal = {},
+  year    = {2026}
+}`;
+        navigator.clipboard.writeText(text).then(() => {
+          const orig = btn.textContent;
+          btn.textContent = 'Copied!';
+          btn.style.color = 'var(--green)';
+          setTimeout(() => { btn.textContent = orig; btn.style.color = ''; }, 2000);
+        });
+      }
+    </script>
+  </body>
+</html>
